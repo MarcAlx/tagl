@@ -6,4 +6,5 @@ jdk:
         - openjdk7
 
 script:
-        - pushd cron4j-original && ant rel && popd
+    - pushd cron4j-original && ant rel && popd
+	- pushd cron4j-mvn && mvn -DskipTests=true clean install && popd
