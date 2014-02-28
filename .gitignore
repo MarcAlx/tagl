@@ -1,6 +1,17 @@
 *.class
+.DS_STORE
+._*
+.Spotlight-V100
+
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.next
+release.properties
