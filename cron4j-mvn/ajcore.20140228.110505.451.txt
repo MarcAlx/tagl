@@ -1,0 +1,207 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.7.3 built on Thursday Jun 13, 2013 at 19:41:31 GMT
+---- Dump Properties ---
+Dump file: ajcore.20140228.110505.451.txt
+Dump reason: java.lang.RuntimeException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+java.lang.RuntimeException: Problem processing attributes in /Users/Marc_Alx/Documents/Temp/TAGL/git/tagl/cron4j-mvn/target/generated-classes/cobertura/it/sauronsoftware/cron4j/AspectRun.class
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureAspectJAttributesUnpacked(BcelObjectType.java:387)
+	at org.aspectj.weaver.bcel.BcelObjectType.<init>(BcelObjectType.java:162)
+	at org.aspectj.weaver.bcel.BcelWorld.buildBcelDelegate(BcelWorld.java:394)
+	at org.aspectj.weaver.bcel.BcelWorld.addSourceObjectType(BcelWorld.java:474)
+	at org.aspectj.weaver.bcel.BcelWorld.addSourceObjectType(BcelWorld.java:440)
+	at org.aspectj.weaver.bcel.BcelWeaver.isAspect(BcelWeaver.java:319)
+	at org.aspectj.weaver.bcel.BcelWeaver.addAspectsFromDirectory(BcelWeaver.java:298)
+	at org.aspectj.weaver.bcel.BcelWeaver.addLibraryJarFile(BcelWeaver.java:236)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.initBcelWorld(AjBuildManager.java:871)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:249)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:185)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:549)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:106)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.executeForkedExecutions(MojoExecutor.java:364)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeForkedExecutions(DefaultLifecycleExecutor.java:173)
+	at org.apache.maven.reporting.exec.DefaultMavenReportExecutor.buildReportPlugin(DefaultMavenReportExecutor.java:273)
+	at org.apache.maven.reporting.exec.DefaultMavenReportExecutor.buildMavenReports(DefaultMavenReportExecutor.java:154)
+	at org.apache.maven.plugins.site.AbstractSiteRenderingMojo.getReports(AbstractSiteRenderingMojo.java:235)
+	at org.apache.maven.plugins.site.SiteMojo.execute(SiteMojo.java:121)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:106)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:317)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:152)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:555)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:214)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: java.lang.ClassCastException: org.aspectj.apache.bcel.classfile.ConstantClass cannot be cast to org.aspectj.apache.bcel.classfile.ConstantUtf8
+	at org.aspectj.apache.bcel.classfile.ConstantPool.getConstantUtf8(ConstantPool.java:223)
+	at org.aspectj.weaver.bcel.BcelConstantPoolReader.readUtf8(BcelConstantPoolReader.java:31)
+	at org.aspectj.weaver.VersionedDataInputStream.readUtf8(VersionedDataInputStream.java:61)
+	at org.aspectj.weaver.VersionedDataInputStream.readPath(VersionedDataInputStream.java:73)
+	at org.aspectj.weaver.AjAttribute$SourceContextAttribute.read(AjAttribute.java:384)
+	at org.aspectj.weaver.AjAttribute.read(AjAttribute.java:125)
+	at org.aspectj.weaver.bcel.Utility.readAjAttributes(Utility.java:101)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureAspectJAttributesUnpacked(BcelObjectType.java:383)
+	... 46 more
+---- System Properties ---
+java.runtime.name=Java(TM) SE Runtime Environment
+sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib
+java.vm.version=23.21-b01
+gopherProxySet=false
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+guice.disable.misplaced.annotation.check=true
+path.separator=:
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=FR
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=unknown
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn
+java.runtime.version=1.7.0_21-b12
+java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/endorsed
+os.arch=x86_64
+java.io.tmpdir=/var/folders/p2/vv7_k2c13r1bw_sfb0ty15nr0000gn/T/
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+os.name=Mac OS X
+net.sourceforge.cobertura.datafile=/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/target/cobertura/cobertura.ser
+classworlds.conf=/usr/local/Cellar/maven/3.1.1/libexec/bin/m2.conf
+sun.jnu.encoding=UTF-8
+java.library.path=/Users/Marc_Alx/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.specification.name=Java Platform API Specification
+java.class.version=51.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=10.9.1
+http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+user.home=/Users/Marc_Alx
+user.timezone=Europe/Paris
+java.awt.printerjob=sun.lwawt.macosx.CPrinterJob
+file.encoding=UTF-8
+java.specification.version=1.7
+java.class.path=/usr/local/Cellar/maven/3.1.1/libexec/boot/plexus-classworlds-2.5.1.jar
+user.name=Marc_Alx
+org.slf4j.simpleLogger.defaultLogLevel=info
+java.vm.specification.version=1.7
+sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher site:site
+java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre
+sun.arch.data.model=64
+user.language=fr
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.lwawt.macosx.LWCToolkit
+java.vm.info=mixed mode
+java.version=1.7.0_21
+java.ext.dirs=/Users/Marc_Alx/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/JObjC.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/classes
+java.vendor=Oracle Corporation
+maven.home=/usr/local/Cellar/maven/3.1.1/libexec
+file.separator=/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeBig
+sun.cpu.endian=little
+project.build.outputDirectory=/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/target/generated-classes/cobertura
+socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16
+ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+sun.cpu.isalist=
+---- Command Line ---
+-1.7
+-encoding
+UTF-8
+-classpath
+/Users/Marc_Alx/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/Marc_Alx/.m2/repository/org/aspectj/aspectjrt/1.7.3/aspectjrt-1.7.3.jar:/Users/Marc_Alx/.m2/repository/net/sourceforge/cobertura/cobertura-runtime/2.0.3/cobertura-runtime-2.0.3.pom:/Users/Marc_Alx/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/Marc_Alx/.m2/repository/net/sourceforge/cobertura/cobertura/2.0.3/cobertura-2.0.3.jar:/Users/Marc_Alx/.m2/repository/org/ow2/asm/asm/4.1/asm-4.1.jar:/Users/Marc_Alx/.m2/repository/org/ow2/asm/asm-tree/4.1/asm-tree-4.1.jar:/Users/Marc_Alx/.m2/repository/org/ow2/asm/asm-commons/4.1/asm-commons-4.1.jar:/Users/Marc_Alx/.m2/repository/org/ow2/asm/asm-util/4.1/asm-util-4.1.jar:/Users/Marc_Alx/.m2/repository/org/ow2/asm/asm-analysis/4.1/asm-analysis-4.1.jar:/Users/Marc_Alx/.m2/repository/jaxen/jaxen/1.1-beta-8/jaxen-1.1-beta-8.jar:/Users/Marc_Alx/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/Users/Marc_Alx/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar:/Users/Marc_Alx/.m2/repository/jdom/jdom/1.0/jdom-1.0.jar:/Users/Marc_Alx/.m2/repository/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar:/Users/Marc_Alx/.m2/repository/xerces/xercesImpl/2.6.2/xercesImpl-2.6.2.jar:/Users/Marc_Alx/.m2/repository/xom/xom/1.0b3/xom-1.0b3.jar:/Users/Marc_Alx/.m2/repository/com/ibm/icu/icu4j/2.6.1/icu4j-2.6.1.jar:/Users/Marc_Alx/.m2/repository/xalan/xalan/2.6.0/xalan-2.6.0.jar:/Users/Marc_Alx/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/0.9.7/tagsoup-0.9.7.jar:/Users/Marc_Alx/.m2/repository/org/apache/ant/ant/1.8.3/ant-1.8.3.jar:/Users/Marc_Alx/.m2/repository/org/apache/ant/ant-launcher/1.8.3/ant-launcher-1.8.3.jar:/Users/Marc_Alx/.m2/repository/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar:/Users/Marc_Alx/.m2/repository/org/mortbay/jetty/jetty/6.1.14/jetty-6.1.14.jar:/Users/Marc_Alx/.m2/repository/org/mortbay/jetty/jetty-util/6.1.14/jetty-util-6.1.14.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/../lib/tools.jar:/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/target/test-classes:/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/target/generated-classes/cobertura
+-aspectpath
+/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/target/generated-classes/cobertura
+-d
+/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/target/test-classes
+/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/src/test/java/it/sauronsoftware/AspectTest.java
+/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/src/test/java/it/sauronsoftware/SchedulingPatternTest.java
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+info directory classpath entry does not exist: /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/lib/sunrsasign.jar
+info zipfile classpath entry does not exist: /Library/Java/JavaVirtualMachines/jdk1.7.0_21.jdk/Contents/Home/jre/classes
+abort ABORT -- (RuntimeException) Problem processing attributes in /Users/Marc_Alx/Documents/Temp/TAGL/git/tagl/cron4j-mvn/target/generated-classes/cobertura/it/sauronsoftware/cron4j/AspectRun.class
+Problem processing attributes in /Users/Marc_Alx/Documents/Temp/TAGL/git/tagl/cron4j-mvn/target/generated-classes/cobertura/it/sauronsoftware/cron4j/AspectRun.class
+java.lang.RuntimeException: Problem processing attributes in /Users/Marc_Alx/Documents/Temp/TAGL/git/tagl/cron4j-mvn/target/generated-classes/cobertura/it/sauronsoftware/cron4j/AspectRun.class
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureAspectJAttributesUnpacked(BcelObjectType.java:387)
+	at org.aspectj.weaver.bcel.BcelObjectType.<init>(BcelObjectType.java:162)
+	at org.aspectj.weaver.bcel.BcelWorld.buildBcelDelegate(BcelWorld.java:394)
+	at org.aspectj.weaver.bcel.BcelWorld.addSourceObjectType(BcelWorld.java:474)
+	at org.aspectj.weaver.bcel.BcelWorld.addSourceObjectType(BcelWorld.java:440)
+	at org.aspectj.weaver.bcel.BcelWeaver.isAspect(BcelWeaver.java:319)
+	at org.aspectj.weaver.bcel.BcelWeaver.addAspectsFromDirectory(BcelWeaver.java:298)
+	at org.aspectj.weaver.bcel.BcelWeaver.addLibraryJarFile(BcelWeaver.java:236)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.initBcelWorld(AjBuildManager.java:871)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.performBuild(AjBuildManager.java:249)
+	at org.aspectj.ajdt.internal.core.builder.AjBuildManager.batchBuild(AjBuildManager.java:185)
+	at org.aspectj.ajdt.ajc.AjdtCommand.doCommand(AjdtCommand.java:112)
+	at org.aspectj.ajdt.ajc.AjdtCommand.runCommand(AjdtCommand.java:60)
+	at org.aspectj.tools.ajc.Main.run(Main.java:371)
+	at org.aspectj.tools.ajc.Main.runMain(Main.java:248)
+	at org.codehaus.mojo.aspectj.AbstractAjcCompiler.execute(AbstractAjcCompiler.java:549)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:106)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.executeForkedExecutions(MojoExecutor.java:364)
+	at org.apache.maven.lifecycle.DefaultLifecycleExecutor.executeForkedExecutions(DefaultLifecycleExecutor.java:173)
+	at org.apache.maven.reporting.exec.DefaultMavenReportExecutor.buildReportPlugin(DefaultMavenReportExecutor.java:273)
+	at org.apache.maven.reporting.exec.DefaultMavenReportExecutor.buildMavenReports(DefaultMavenReportExecutor.java:154)
+	at org.apache.maven.plugins.site.AbstractSiteRenderingMojo.getReports(AbstractSiteRenderingMojo.java:235)
+	at org.apache.maven.plugins.site.SiteMojo.execute(SiteMojo.java:121)
+	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:106)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:153)
+	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:145)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:84)
+	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:59)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.singleThreadedBuild(LifecycleStarter.java:183)
+	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:161)
+	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:317)
+	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:152)
+	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:555)
+	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:214)
+	at org.apache.maven.cli.MavenCli.main(MavenCli.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+Caused by: java.lang.ClassCastException: org.aspectj.apache.bcel.classfile.ConstantClass cannot be cast to org.aspectj.apache.bcel.classfile.ConstantUtf8
+	at org.aspectj.apache.bcel.classfile.ConstantPool.getConstantUtf8(ConstantPool.java:223)
+	at org.aspectj.weaver.bcel.BcelConstantPoolReader.readUtf8(BcelConstantPoolReader.java:31)
+	at org.aspectj.weaver.VersionedDataInputStream.readUtf8(VersionedDataInputStream.java:61)
+	at org.aspectj.weaver.VersionedDataInputStream.readPath(VersionedDataInputStream.java:73)
+	at org.aspectj.weaver.AjAttribute$SourceContextAttribute.read(AjAttribute.java:384)
+	at org.aspectj.weaver.AjAttribute.read(AjAttribute.java:125)
+	at org.aspectj.weaver.bcel.Utility.readAjAttributes(Utility.java:101)
+	at org.aspectj.weaver.bcel.BcelObjectType.ensureAspectJAttributesUnpacked(BcelObjectType.java:383)
+	... 46 more
+
