@@ -40,7 +40,6 @@
         <configuration>
             <complianceLevel>1.7</complianceLevel>  
         </configuration>
-
         <executions>
           <execution>
             <goals>

@@ -7,4 +7,5 @@ UTF-8
 /Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/target/classes
 -d
 /Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/target/test-classes
+/Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/src/test/java/it/sauronsoftware/AspectTest.java
 /Users/Marc_Alx/Documents/Temp/tagl/git/tagl/cron4j-mvn/src/test/java/it/sauronsoftware/SchedulingPatternTest.java
